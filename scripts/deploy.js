@@ -5,7 +5,7 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
-
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 async function main() {
   const lp0 = "0x4882836425c45bffafb3b1784feca8dcb104ea35";
   const lp1 = "0xc9B91C25c1632038C871020b53C46ad4942f263a";
@@ -54,6 +54,37 @@ async function main() {
   console.log(
     `Lock with 1 ETH and unlock timestamp deployed to ${strat.address} ${stake.address}`
   );
+
+  console.log("We verify now, Please wait!");
+  await delay(35000);
+
+  console.log("Verifying strategy");
+  try {
+    await hre.run("verify:verify", {
+      address: strat.address,
+      constructorArguments: [
+        lp,
+        1,
+        chef,
+        common,
+        _outputToNativeRoute,
+        _outputToLp0Route,
+        _outputToLp1Route,
+      ],
+    });
+  } catch (e) {
+    console.log(e);
+  }
+
+  console.log("Verifying staking contract");
+  try {
+    await hre.run("verify:verify", {
+      address: stake.address,
+      constructorArguments: [strat.address, "Test", "TST", 0],
+    });
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -49,14 +49,14 @@ module.exports = {
     //   gasPrice: 8000000000,
     // },
     testnet: {
-      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      url: "https://data-seed-prebsc-1-s2.binance.org:8545",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      gas: 2100000,
-      gasPrice: 8000000000,
+      // gas: 2100000,
+      // gasPrice: 8000000000,
     },
   },
   etherscan: {
-    apiKey: process.env.POLYGONSCAN_API_KEY_MATIC,
+    apiKey: "XQHBN26NNUZIRZVW5CPGHD9Z13PZZHRXKM",
   },
 };
