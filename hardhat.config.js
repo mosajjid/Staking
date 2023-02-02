@@ -52,7 +52,7 @@ module.exports = {
       url: "https://data-seed-prebsc-1-s2.binance.org:8545",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      // gas: 2100000,
+      // gas: 9100000,
       // gasPrice: 8000000000,
     },
   },

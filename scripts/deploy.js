@@ -7,13 +7,13 @@
 const hre = require("hardhat");
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 async function main() {
-  const lp0 = "0x4882836425c45bffafb3b1784feca8dcb104ea35";
-  const lp1 = "0xc9B91C25c1632038C871020b53C46ad4942f263a";
+  const lp1 = "0xe66c93eF52F89812fDBA8908104B302Cb8514689";
+  const lp0 = "0x25030f839bf2513A3Ea6a23DB43e3Ef76b014dbE";
   const router = "0xd99d1c33f9fc3444f8101754abc46c52416550d1";
-  const lp = "0xf1a2d97ccf2c7110d5228d69e5554d4121e92583";
+  const lp = "0x3B123dd81822FfBc59B5b4C4a477B4199f45222B";
   const wbnb = "0xae13d989dac2f0debff460ac112a837c89baa7cd";
-  const Reward = "0xd23fb63ecdd5c68d22015e969dd20aba9681d0e3";
-  const chef = "0xa6a07041bb962098089aaac16aeca431af5fefea";
+  const Reward = "0xA87Fa55949d6E7597E6ebF4bC2a5e2f36cAD6E3E";
+  const chef = "0x1E7152B9E161933F01890433B01db8B4b9302d4d";
   // const strategy = "0x36f1c8015fc540fa206b29e790fb660a61059c26";
   const vault = "0x8c2cb67215c054d3c9431cd85e2b9fe6d9fd0b98";
 
@@ -86,6 +86,7 @@ async function main() {
     console.log(e);
   }
 }
+
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
