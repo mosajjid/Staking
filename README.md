@@ -17,8 +17,9 @@ npx hardhat run scripts/deploy.js
 2) Add liquidity on pancakeswap
 3) deploy test reward token
 4) deploy test masterchef
-5) Transferownership of reward token to masterchef
-6) deploy strategy contract
-7) deploy vault contract
+5) Add pool
+6) Transferownership of reward token to masterchef
+7) deploy strategy contract
+8) deploy vault contract
 9) setVault in stategy with deployed address
 10) transferownership of strategy to vault
